@@ -88,7 +88,6 @@ char* ULX_KEYCHAIN_SERVICE_NAME = "UCAS网络登陆密钥";
     char buffer[2048];
     strncpy (buffer, attr.data, attr.length);
     buffer[attr.length] = '\0';
-    printf ("'%d' = \"%s\"\n", attr.tag, buffer);
     [wrapper setStudentID:[[NSString alloc] initWithCString:buffer encoding:NSUTF8StringEncoding]];
     
     SecKeychainItemFreeContent (&list, password);
