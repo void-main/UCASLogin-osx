@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DFA201AC16DC790300C82764 /* ucas_image.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA201AB16DC790300C82764 /* ucas_image.png */; };
 		DFE1845C16DC5D2D00D74D7A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFE1845B16DC5D2D00D74D7A /* Cocoa.framework */; };
 		DFE1846616DC5D2D00D74D7A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFE1846416DC5D2D00D74D7A /* InfoPlist.strings */; };
 		DFE1846816DC5D2D00D74D7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE1846716DC5D2D00D74D7A /* main.m */; };
 		DFE1846C16DC5D2D00D74D7A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DFE1846A16DC5D2D00D74D7A /* Credits.rtf */; };
 		DFE1846F16DC5D2D00D74D7A /* ULXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE1846E16DC5D2D00D74D7A /* ULXAppDelegate.m */; };
 		DFE1847216DC5D2D00D74D7A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE1847016DC5D2D00D74D7A /* MainMenu.xib */; };
+		DFE1847C16DC672000D74D7A /* status_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DFE1847B16DC672000D74D7A /* status_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DFA201AB16DC790300C82764 /* ucas_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ucas_image.png; path = Resources/ucas_image.png; sourceTree = "<group>"; };
 		DFE1845816DC5D2D00D74D7A /* UCASLogin-osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UCASLogin-osx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE1845B16DC5D2D00D74D7A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DFE1845E16DC5D2D00D74D7A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -29,6 +32,7 @@
 		DFE1846D16DC5D2D00D74D7A /* ULXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ULXAppDelegate.h; sourceTree = "<group>"; };
 		DFE1846E16DC5D2D00D74D7A /* ULXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ULXAppDelegate.m; sourceTree = "<group>"; };
 		DFE1847116DC5D2D00D74D7A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DFE1847B16DC672000D74D7A /* status_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = status_icon.png; path = Resources/status_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,7 @@
 		DFE1844F16DC5D2D00D74D7A = {
 			isa = PBXGroup;
 			children = (
+				DFE1847816DC650B00D74D7A /* Resources */,
 				DFE1846116DC5D2D00D74D7A /* UCASLogin-osx */,
 				DFE1845A16DC5D2D00D74D7A /* Frameworks */,
 				DFE1845916DC5D2D00D74D7A /* Products */,
@@ -100,6 +105,16 @@
 				DFE1846A16DC5D2D00D74D7A /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFE1847816DC650B00D74D7A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DFA201AB16DC790300C82764 /* ucas_image.png */,
+				DFE1847B16DC672000D74D7A /* status_icon.png */,
+			);
+			name = Resources;
+			path = "UCASLogin-osx";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +172,8 @@
 				DFE1846616DC5D2D00D74D7A /* InfoPlist.strings in Resources */,
 				DFE1846C16DC5D2D00D74D7A /* Credits.rtf in Resources */,
 				DFE1847216DC5D2D00D74D7A /* MainMenu.xib in Resources */,
+				DFE1847C16DC672000D74D7A /* status_icon.png in Resources */,
+				DFA201AC16DC790300C82764 /* ucas_image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +323,7 @@
 				DFE1847716DC5D2D00D74D7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

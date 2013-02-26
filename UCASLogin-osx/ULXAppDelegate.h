@@ -8,7 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ULXAppDelegate : NSObject <NSApplicationDelegate>
+@interface ULXAppDelegate : NSObject <NSApplicationDelegate> {
+    NSStatusItem* statusItem;
+    IBOutlet NSMenu* statusMenu;
+}
 
 @property (assign) IBOutlet NSWindow *window;
 

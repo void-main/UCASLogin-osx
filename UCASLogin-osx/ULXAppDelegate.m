@@ -20,4 +20,19 @@
     // Insert code here to initialize your application
 }
 
+- (void) awakeFromNib
+{
+    [self setupStatusMenu];
+}
+
+- (void) setupStatusMenu
+{
+    statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
+    [statusItem setMenu:statusMenu];
+    NSString* imageName = [[NSBundle mainBundle] pathForResource:@"status_icon" ofType:@"png"];
+    NSImage* imageObj = [[NSImage alloc] initWithContentsOfFile:imageName];
+    [statusItem setImage:imageObj];
+    [statusItem setHighlightMode:YES];
+}
+
 @end
