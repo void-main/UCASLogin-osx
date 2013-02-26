@@ -23,11 +23,11 @@
 - (void) awakeFromNib
 {
     [self setupStatusMenu];
-    if(wrapper == NULL) { // only load keys once
-        wrapper = [ULXLoginKeyWrapper loadKeysFromKeyChain];
+    if(_wrapper == NULL) { // only load keys once
+        _wrapper = [ULXLoginKeyWrapper loadKeysFromKeyChain];
     }
     
-    if(![wrapper isValidKey]) {
+    if(![_wrapper isValidKey]) {
         [self openSettingsWindow];
     }
 }

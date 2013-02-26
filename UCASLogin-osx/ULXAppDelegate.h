@@ -13,8 +13,9 @@
 @interface ULXAppDelegate : NSObject <NSApplicationDelegate> {
     NSStatusItem* statusItem;
     IBOutlet NSMenu* statusMenu;
-    ULXLoginKeyWrapper *wrapper;
 }
+
+@property (retain) ULXLoginKeyWrapper *wrapper;
 
 - (IBAction) showOpenDialog:(id)sender;
 - (IBAction) quitTheProgram:(id)sender;

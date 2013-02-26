@@ -12,6 +12,14 @@ char* ULX_KEYCHAIN_SERVICE_NAME = "UCAS网络登陆密钥";
 
 @implementation ULXLoginKeyWrapper
 
+- (id)init
+{
+    self = [super init];
+    _studentID = @"";
+    _password = @"";
+    return self;
+}
+
 - (BOOL)saveToKeychain
 {
     SecKeychainItemRef itemRef;
@@ -88,7 +96,7 @@ char* ULX_KEYCHAIN_SERVICE_NAME = "UCAS网络登陆密钥";
 
 - (BOOL)isValidKey
 {
-    return (_studentID != nil) & (_password != nil);
+    return ([_studentID length] > 0) & ([_password length] > 0);
 }
 
 @end

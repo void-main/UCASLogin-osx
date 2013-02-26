@@ -27,8 +27,26 @@
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-    
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    ULXAppDelegate* mainApp = (ULXAppDelegate *)[NSApplication sharedApplication].delegate;
+    ULXLoginKeyWrapper* wrapper = [mainApp wrapper];
+    [studentIDField setStringValue:[wrapper studentID]];
+    [passwordField setStringValue:[wrapper password]];
+}
+
+- (IBAction)saveStudentIdAndPassword:(id)sender
+{
+    ULXLoginKeyWrapper* wrapper = [[ULXLoginKeyWrapper alloc] init];
+    [wrapper setStudentID:[studentIDField stringValue]];
+    [wrapper setPassword:[passwordField stringValue]];
+    if([wrapper saveToKeychain]) {
+        ULXAppDelegate* mainApp = (ULXAppDelegate *)[NSApplication sharedApplication].delegate;
+        //TODO alert to say success
+        NSLog(@"Save Success!");
+        [mainApp setWrapper:wrapper];
+    } else {
+        // TODO alert to say failed...
+        NSLog(@"Save Failed!");
+    }
 }
 
 @end

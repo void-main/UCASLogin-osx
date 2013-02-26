@@ -7,10 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ULXAppDelegate.h"
 
 @interface ULXSettingsWindowController : NSWindowController {
     IBOutlet NSTextField* studentIDField;
     IBOutlet NSSecureTextField* passwordField;
 }
+
+- (IBAction)saveStudentIdAndPassword:(id)sender;
 
 @end
