@@ -23,6 +23,13 @@
 - (void) awakeFromNib
 {
     [self setupStatusMenu];
+    if(wrapper == NULL) { // only load keys once
+        wrapper = [ULXLoginKeyWrapper loadKeysFromKeyChain];
+    }
+    
+    if(![wrapper isValidKey]) {
+        [self openSettingsWindow];
+    }
 }
 
 - (void) setupStatusMenu
@@ -33,6 +40,22 @@
     NSImage* imageObj = [[NSImage alloc] initWithContentsOfFile:imageName];
     [statusItem setImage:imageObj];
     [statusItem setHighlightMode:YES];
+}
+
+- (IBAction)quitTheProgram:(id)sender
+{
+    exit(0);
+}
+
+- (IBAction)showOpenDialog:(id)sender
+{
+    [self openSettingsWindow];
+}
+
+- (void) openSettingsWindow
+{
+    ULXSettingsWindowController* controller = [[ULXSettingsWindowController alloc] initWithWindowNibName:@"ULXSettingsWindowController"];
+    [controller showWindow:nil];
 }
 
 @end

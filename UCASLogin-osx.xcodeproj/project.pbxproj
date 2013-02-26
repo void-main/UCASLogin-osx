@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF427E3A16DCAEAF002A487D /* ULXLoginKeyWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DF427E3916DCAEAF002A487D /* ULXLoginKeyWrapper.m */; };
+		DF427E3C16DCB384002A487D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF427E3B16DCB384002A487D /* Security.framework */; };
 		DFA201AC16DC790300C82764 /* ucas_image.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA201AB16DC790300C82764 /* ucas_image.png */; };
+		DFA201B116DCA15C00C82764 /* ULXLoginWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA201B016DCA15C00C82764 /* ULXLoginWorker.m */; };
+		DFA201B516DCA61700C82764 /* ULXSettingsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA201B316DCA61700C82764 /* ULXSettingsWindowController.m */; };
+		DFA201B616DCA61700C82764 /* ULXSettingsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA201B416DCA61700C82764 /* ULXSettingsWindowController.xib */; };
 		DFE1845C16DC5D2D00D74D7A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFE1845B16DC5D2D00D74D7A /* Cocoa.framework */; };
 		DFE1846616DC5D2D00D74D7A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFE1846416DC5D2D00D74D7A /* InfoPlist.strings */; };
 		DFE1846816DC5D2D00D74D7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE1846716DC5D2D00D74D7A /* main.m */; };
@@ -18,7 +23,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF427E3816DCAEAF002A487D /* ULXLoginKeyWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULXLoginKeyWrapper.h; sourceTree = "<group>"; };
+		DF427E3916DCAEAF002A487D /* ULXLoginKeyWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULXLoginKeyWrapper.m; sourceTree = "<group>"; };
+		DF427E3B16DCB384002A487D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		DFA201AB16DC790300C82764 /* ucas_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ucas_image.png; path = Resources/ucas_image.png; sourceTree = "<group>"; };
+		DFA201AF16DCA15C00C82764 /* ULXLoginWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULXLoginWorker.h; sourceTree = "<group>"; };
+		DFA201B016DCA15C00C82764 /* ULXLoginWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULXLoginWorker.m; sourceTree = "<group>"; };
+		DFA201B216DCA61700C82764 /* ULXSettingsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULXSettingsWindowController.h; sourceTree = "<group>"; };
+		DFA201B316DCA61700C82764 /* ULXSettingsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULXSettingsWindowController.m; sourceTree = "<group>"; };
+		DFA201B416DCA61700C82764 /* ULXSettingsWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ULXSettingsWindowController.xib; sourceTree = "<group>"; };
 		DFE1845816DC5D2D00D74D7A /* UCASLogin-osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UCASLogin-osx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE1845B16DC5D2D00D74D7A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DFE1845E16DC5D2D00D74D7A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -40,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF427E3C16DCB384002A487D /* Security.framework in Frameworks */,
 				DFE1845C16DC5D2D00D74D7A /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +64,7 @@
 		DFE1844F16DC5D2D00D74D7A = {
 			isa = PBXGroup;
 			children = (
+				DF427E3B16DCB384002A487D /* Security.framework */,
 				DFE1847816DC650B00D74D7A /* Resources */,
 				DFE1846116DC5D2D00D74D7A /* UCASLogin-osx */,
 				DFE1845A16DC5D2D00D74D7A /* Frameworks */,
@@ -87,10 +102,17 @@
 		DFE1846116DC5D2D00D74D7A /* UCASLogin-osx */ = {
 			isa = PBXGroup;
 			children = (
+				DFA201B216DCA61700C82764 /* ULXSettingsWindowController.h */,
+				DFA201B316DCA61700C82764 /* ULXSettingsWindowController.m */,
+				DFA201B416DCA61700C82764 /* ULXSettingsWindowController.xib */,
 				DFE1846D16DC5D2D00D74D7A /* ULXAppDelegate.h */,
 				DFE1846E16DC5D2D00D74D7A /* ULXAppDelegate.m */,
 				DFE1847016DC5D2D00D74D7A /* MainMenu.xib */,
 				DFE1846216DC5D2D00D74D7A /* Supporting Files */,
+				DFA201AF16DCA15C00C82764 /* ULXLoginWorker.h */,
+				DFA201B016DCA15C00C82764 /* ULXLoginWorker.m */,
+				DF427E3816DCAEAF002A487D /* ULXLoginKeyWrapper.h */,
+				DF427E3916DCAEAF002A487D /* ULXLoginKeyWrapper.m */,
 			);
 			path = "UCASLogin-osx";
 			sourceTree = "<group>";
@@ -174,6 +196,7 @@
 				DFE1847216DC5D2D00D74D7A /* MainMenu.xib in Resources */,
 				DFE1847C16DC672000D74D7A /* status_icon.png in Resources */,
 				DFA201AC16DC790300C82764 /* ucas_image.png in Resources */,
+				DFA201B616DCA61700C82764 /* ULXSettingsWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +209,9 @@
 			files = (
 				DFE1846816DC5D2D00D74D7A /* main.m in Sources */,
 				DFE1846F16DC5D2D00D74D7A /* ULXAppDelegate.m in Sources */,
+				DFA201B116DCA15C00C82764 /* ULXLoginWorker.m in Sources */,
+				DFA201B516DCA61700C82764 /* ULXSettingsWindowController.m in Sources */,
+				DF427E3A16DCAEAF002A487D /* ULXLoginKeyWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

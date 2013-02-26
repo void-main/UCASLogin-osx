@@ -7,12 +7,18 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ULXLoginKeyWrapper.h"
+#import "ULXSettingsWindowController.h"
 
 @interface ULXAppDelegate : NSObject <NSApplicationDelegate> {
     NSStatusItem* statusItem;
     IBOutlet NSMenu* statusMenu;
+    ULXLoginKeyWrapper *wrapper;
 }
 
-@property (assign) IBOutlet NSWindow *window;
+- (IBAction) showOpenDialog:(id)sender;
+- (IBAction) quitTheProgram:(id)sender;
+
+- (void) openSettingsWindow;
 
 @end
