@@ -64,7 +64,6 @@
 		DFE1844F16DC5D2D00D74D7A = {
 			isa = PBXGroup;
 			children = (
-				DF427E3B16DCB384002A487D /* Security.framework */,
 				DFE1847816DC650B00D74D7A /* Resources */,
 				DFE1846116DC5D2D00D74D7A /* UCASLogin-osx */,
 				DFE1845A16DC5D2D00D74D7A /* Frameworks */,
@@ -83,6 +82,7 @@
 		DFE1845A16DC5D2D00D74D7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF427E3B16DCB384002A487D /* Security.framework */,
 				DFE1845B16DC5D2D00D74D7A /* Cocoa.framework */,
 				DFE1845D16DC5D2D00D74D7A /* Other Frameworks */,
 			);
