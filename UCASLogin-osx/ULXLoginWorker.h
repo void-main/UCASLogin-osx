@@ -9,6 +9,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ULXAppDelegate.h"
+#import "ULXLoginKeyWrapper.h"
 
 @interface ULXLoginWorker : NSObject {
     IBOutlet NSMenuItem *itemLoginCity;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF402B7F16DD9C350082D2FE /* ulx_helper.py in Resources */ = {isa = PBXBuildFile; fileRef = DF402B7E16DD9C350082D2FE /* ulx_helper.py */; };
 		DF427E3A16DCAEAF002A487D /* ULXLoginKeyWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DF427E3916DCAEAF002A487D /* ULXLoginKeyWrapper.m */; };
 		DF427E3C16DCB384002A487D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF427E3B16DCB384002A487D /* Security.framework */; };
 		DFA201AC16DC790300C82764 /* ucas_image.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA201AB16DC790300C82764 /* ucas_image.png */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF402B7E16DD9C350082D2FE /* ulx_helper.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ulx_helper.py; sourceTree = "<group>"; };
 		DF427E3816DCAEAF002A487D /* ULXLoginKeyWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULXLoginKeyWrapper.h; sourceTree = "<group>"; };
 		DF427E3916DCAEAF002A487D /* ULXLoginKeyWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULXLoginKeyWrapper.m; sourceTree = "<group>"; };
 		DF427E3B16DCB384002A487D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
@@ -61,9 +63,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF402B7D16DD9C350082D2FE /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				DF402B7E16DD9C350082D2FE /* ulx_helper.py */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
 		DFE1844F16DC5D2D00D74D7A = {
 			isa = PBXGroup;
 			children = (
+				DF402B7D16DD9C350082D2FE /* scripts */,
 				DFE1847816DC650B00D74D7A /* Resources */,
 				DFE1846116DC5D2D00D74D7A /* UCASLogin-osx */,
 				DFE1845A16DC5D2D00D74D7A /* Frameworks */,
@@ -197,6 +208,7 @@
 				DFE1847C16DC672000D74D7A /* status_icon.png in Resources */,
 				DFA201AC16DC790300C82764 /* ucas_image.png in Resources */,
 				DFA201B616DCA61700C82764 /* ULXSettingsWindowController.xib in Resources */,
+				DF402B7F16DD9C350082D2FE /* ulx_helper.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

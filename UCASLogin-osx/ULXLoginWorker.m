@@ -12,7 +12,11 @@
 
 - (IBAction)login:(id)sender
 {
-    NSLog(@"Login %@", sender);
+    ULXAppDelegate* mainApp = [NSApplication sharedApplication].delegate;
+    ULXLoginKeyWrapper* wrapper = [mainApp wrapper];
+    NSString* tag = [NSString stringWithFormat:@"%ld", (long)[sender tag]];
+    NSArray* array = [NSArray arrayWithObjects:@"-login", tag, @"-u", [wrapper studentID], @"-p", [wrapper password], nil];
+    [self executeHelper:array];
 }
 
 - (IBAction)logout:(id)sender
@@ -28,13 +32,15 @@
 
 - (void)executeScript:(NSString *)scriptName withArguments:(NSArray *)arguments
 {
-    NSString *scriptPath = [[NSBundle mainBundle] pathForResource:scriptName ofType:@"py" inDirectory:@"scripts"];
+    NSString *scriptPath = [[NSBundle mainBundle] pathForResource:scriptName ofType:@"py" inDirectory:@""];
     NSTask *task;
     task = [[NSTask alloc] init];
-    [task setLaunchPath:@"/usr/bin/"];
-    NSMutableArray* array = [NSMutableArray arrayWithArray:arguments];
-    [array insertObject:@"python" atIndex:0];
-    [array insertObject:scriptPath atIndex:1];
+    [task setLaunchPath:@"/usr/bin/python"];
+    NSMutableArray* array = [[NSMutableArray alloc] initWithObjects:scriptPath, nil];
+    for (NSInteger index = 0; index < [arguments count]; index ++) {
+        [array addObject:[arguments objectAtIndex:index]];
+    }
+    
     [task setArguments:array];
     
     NSPipe *pipe;
