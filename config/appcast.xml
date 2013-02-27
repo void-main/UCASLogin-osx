@@ -6,7 +6,7 @@
       <description>Most recent changes with links to updates.</description>
       <language>en</language>
 
-      <item>
+      <!-- <item>
         <title>Version 1.0.1 (0 bug fixes; 1 new features)</title>
         <sparkle:releaseNotesLink>
           https://raw.github.com/void-main/UCASLogin-osx/master/Builds/v1.0.1/change_log.html
@@ -17,6 +17,6 @@
                    sparkle:dsaSignature="MCwCFCshkytEd/kYBaa64scUI8c+gMOjAhRn5u6W3pwhPSTFLQ/3OwPREutWiQ=="
                    length="552649"
                    type="application/octet-stream" />
-    </item>
+      </item> -->
    </channel>
 </rss>
