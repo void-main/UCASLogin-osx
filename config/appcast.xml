@@ -7,13 +7,13 @@
       <language>en</language>
 
       <item>
-        <title>Version 2.0 (0 bug fixes; 0 new features)</title>
+        <title>Version 1.0.1 (0 bug fixes; 1 new features)</title>
         <sparkle:releaseNotesLink>
-          https://raw.github.com/void-main/UCASLogin-osx/master/Builds/v2.0/2.0.html
+          https://raw.github.com/void-main/UCASLogin-osx/master/Builds/v1.0.1/change_log.html
         </sparkle:releaseNotesLink>
         <pubDate>Wed, 27 Feb 2013 12:48:00 +0800</pubDate>
-        <enclosure url="https://raw.github.com/void-main/UCASLogin-osx/master/Builds/v2.0/2.0.zip"
-                   sparkle:version="2.0"
+        <enclosure url="https://raw.github.com/void-main/UCASLogin-osx/master/Builds/v1.0.1/UCASLogin-osx.zip"
+                   sparkle:version="1.0.1"
                    sparkle:dsaSignature="MCwCFCshkytEd/kYBaa64scUI8c+gMOjAhRn5u6W3pwhPSTFLQ/3OwPREutWiQ=="
                    length="552649"
                    type="application/octet-stream" />
