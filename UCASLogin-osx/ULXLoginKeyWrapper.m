@@ -23,16 +23,26 @@ char* ULX_KEYCHAIN_SERVICE_NAME = "UCAS网络登陆密钥";
 - (BOOL)saveToKeychain
 {
     SecKeychainItemRef itemRef;
-    
-    // Always deletes the existsing keychain
-    OSStatus loadStatus = SecKeychainFindGenericPassword(NULL, strlen(ULX_KEYCHAIN_SERVICE_NAME), ULX_KEYCHAIN_SERVICE_NAME, 0, NULL, 0, NULL, &itemRef);
-    if(loadStatus == noErr) { // if the item with the same name exists, delete it first!
-        SecKeychainItemDelete(itemRef);
-    }
+    OSStatus saveStatus;
     
     const char* utf8StudentID = [_studentID UTF8String];
     const char* utf8Password = [_password UTF8String];
-    OSStatus saveStatus = SecKeychainAddGenericPassword(NULL, strlen(ULX_KEYCHAIN_SERVICE_NAME), ULX_KEYCHAIN_SERVICE_NAME, strlen(utf8StudentID), utf8StudentID, strlen(utf8Password), utf8Password, NULL);
+    
+    // Always deletes the existsing keychain
+    OSStatus loadStatus = SecKeychainFindGenericPassword(NULL, strlen(ULX_KEYCHAIN_SERVICE_NAME), ULX_KEYCHAIN_SERVICE_NAME, 0, NULL, 0, NULL, &itemRef);
+    
+    if(loadStatus == noErr) { // if the item with the same name exists, needs to update it
+        SecKeychainAttribute attributes[1];
+        attributes[0].tag = kSecAccountItemAttr;
+        attributes[0].data = utf8StudentID;
+        attributes[0].length = strlen(utf8StudentID);
+        SecKeychainAttributeList list;
+        list.count = 1;
+        list.attr = attributes;
+        saveStatus = SecKeychainItemModifyContent(itemRef, &list, strlen(utf8Password), utf8Password);
+    } else {
+        saveStatus = SecKeychainAddGenericPassword(NULL, strlen(ULX_KEYCHAIN_SERVICE_NAME), ULX_KEYCHAIN_SERVICE_NAME, strlen(utf8StudentID), utf8StudentID, strlen(utf8Password), utf8Password, NULL);
+    }
     
     if(saveStatus == noErr)
     {
