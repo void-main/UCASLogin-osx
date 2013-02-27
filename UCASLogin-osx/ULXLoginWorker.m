@@ -76,11 +76,8 @@
     file = [pipe fileHandleForReading];
     
     [task launch];
-    NSData *data = [[pipe fileHandleForReading] readDataToEndOfFile];
-    
+    [[pipe fileHandleForReading] readDataToEndOfFile];
     [task waitUntilExit];
-    NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog(@"%@", result);
 }
 
 @end
