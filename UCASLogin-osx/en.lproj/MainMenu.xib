@@ -109,6 +109,14 @@
 						<reference key="NSOnImage" ref="725423866"/>
 						<reference key="NSMixedImage" ref="124416287"/>
 					</object>
+					<object class="NSMenuItem" id="825395318">
+						<reference key="NSMenu" ref="577020755"/>
+						<string key="NSTitle">检查更新...</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="725423866"/>
+						<reference key="NSMixedImage" ref="124416287"/>
+					</object>
 					<object class="NSMenuItem" id="770385238">
 						<reference key="NSMenu" ref="577020755"/>
 						<string key="NSTitle">设置...</string>
@@ -147,6 +155,14 @@
 		<object class="IBObjectContainer" key="IBDocument.Objects">
 			<array class="NSMutableArray" key="connectionRecords">
 				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">terminate:</string>
+						<reference key="source" ref="1050"/>
+						<reference key="destination" ref="707186739"/>
+					</object>
+					<int key="connectionID">578</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">delegate</string>
 						<reference key="source" ref="1021"/>
@@ -161,14 +177,6 @@
 						<reference key="destination" ref="577020755"/>
 					</object>
 					<int key="connectionID">552</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">quitTheProgram:</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="707186739"/>
-					</object>
-					<int key="connectionID">559</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -242,6 +250,14 @@
 					</object>
 					<int key="connectionID">568</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">checkForUpdates:</string>
+						<reference key="source" ref="573425468"/>
+						<reference key="destination" ref="825395318"/>
+					</object>
+					<int key="connectionID">580</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -285,10 +301,11 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="249109845"/>
 							<reference ref="770385238"/>
-							<reference ref="707186739"/>
 							<reference ref="902481978"/>
 							<reference ref="467329657"/>
+							<reference ref="707186739"/>
 							<reference ref="612860814"/>
+							<reference ref="825395318"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -360,6 +377,11 @@
 						<reference key="object" ref="573425468"/>
 						<reference key="parent" ref="0"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">579</int>
+						<reference key="object" ref="825395318"/>
+						<reference key="parent" ref="577020755"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -381,12 +403,13 @@
 				<string key="557.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="558.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="573.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="579.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">573</int>
+			<int key="maxID">580</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -423,20 +446,17 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">ULXAppDelegate</string>
 					<string key="superclassName">NSObject</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="quitTheProgram:">id</string>
-						<string key="showOpenDialog:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="quitTheProgram:">
-							<string key="name">quitTheProgram:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="showOpenDialog:">
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">showOpenDialog:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">showOpenDialog:</string>
+						<object class="IBActionInfo" key="NS.object.0">
 							<string key="name">showOpenDialog:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-					</dictionary>
+					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">statusMenu</string>
 						<string key="NS.object.0">NSMenu</string>

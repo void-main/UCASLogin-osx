@@ -40,11 +40,6 @@
     [_statusItem setHighlightMode:YES];
 }
 
-- (IBAction)quitTheProgram:(id)sender
-{
-    exit(0);
-}
-
 - (IBAction)showOpenDialog:(id)sender
 {
     [self openSettingsWindow];

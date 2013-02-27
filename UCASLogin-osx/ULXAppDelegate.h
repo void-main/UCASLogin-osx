@@ -21,7 +21,6 @@
 @property (retain) ULXLoginKeyWrapper *wrapper;
 
 - (IBAction) showOpenDialog:(id)sender;
-- (IBAction) quitTheProgram:(id)sender;
 
 - (void) openSettingsWindow;
 
