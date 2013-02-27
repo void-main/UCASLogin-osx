@@ -5,5 +5,16 @@
       <link>https://raw.github.com/void-main/UCASLogin-osx/master/config/appcast.xml</link>
       <description>Most recent changes with links to updates.</description>
       <language>en</language>
+
+      <item>
+        <title>Version 0.1.1 (0 bug fixes; 0 new features)</title>
+        <sparkle:releaseNotesLink>
+          https://raw.github.com/void-main/UCASLogin-osx/master/Builds/v0.1.1/0.1.1.html
+        </sparkle:releaseNotesLink>
+        <pubDate>Wed, 27 Feb 2013 12:48:00 +0800</pubDate>
+        <enclosure url="https://github.com/void-main/UCASLogin-osx/blob/master/Builds/v0.1.1/UCASLogin-osx.0.1.1.zip"
+                   sparkle:version="0.1.1"
+                   type="application/octet-stream" />
+    </item>
    </channel>
 </rss>
