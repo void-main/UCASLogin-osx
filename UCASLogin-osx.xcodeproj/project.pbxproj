@@ -25,6 +25,7 @@
 		DFA201B116DCA15C00C82764 /* ULXLoginWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA201B016DCA15C00C82764 /* ULXLoginWorker.m */; };
 		DFA201B516DCA61700C82764 /* ULXSettingsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA201B316DCA61700C82764 /* ULXSettingsWindowController.m */; };
 		DFA201B616DCA61700C82764 /* ULXSettingsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA201B416DCA61700C82764 /* ULXSettingsWindowController.xib */; };
+		DFCB3B5516DDC11B00A9A956 /* icon.iconset in Resources */ = {isa = PBXBuildFile; fileRef = DFCB3B5416DDC11B00A9A956 /* icon.iconset */; };
 		DFE1845C16DC5D2D00D74D7A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFE1845B16DC5D2D00D74D7A /* Cocoa.framework */; };
 		DFE1846616DC5D2D00D74D7A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFE1846416DC5D2D00D74D7A /* InfoPlist.strings */; };
 		DFE1846816DC5D2D00D74D7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE1846716DC5D2D00D74D7A /* main.m */; };
@@ -67,6 +68,7 @@
 		DFA201B216DCA61700C82764 /* ULXSettingsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULXSettingsWindowController.h; sourceTree = "<group>"; };
 		DFA201B316DCA61700C82764 /* ULXSettingsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULXSettingsWindowController.m; sourceTree = "<group>"; };
 		DFA201B416DCA61700C82764 /* ULXSettingsWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ULXSettingsWindowController.xib; sourceTree = "<group>"; };
+		DFCB3B5416DDC11B00A9A956 /* icon.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = icon.iconset; sourceTree = "<group>"; };
 		DFE1845816DC5D2D00D74D7A /* UCASLogin-osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UCASLogin-osx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE1845B16DC5D2D00D74D7A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DFE1845E16DC5D2D00D74D7A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -107,6 +109,7 @@
 		DFE1844F16DC5D2D00D74D7A = {
 			isa = PBXGroup;
 			children = (
+				DFCB3B5416DDC11B00A9A956 /* icon.iconset */,
 				DF402B7D16DD9C350082D2FE /* scripts */,
 				DFE1847816DC650B00D74D7A /* Resources */,
 				DFE1846116DC5D2D00D74D7A /* UCASLogin-osx */,
@@ -260,6 +263,7 @@
 				DF402B8F16DDA7EC0082D2FE /* status_icon_6.png in Resources */,
 				DF402B9016DDA7EC0082D2FE /* status_icon_7.png in Resources */,
 				DF402B9116DDA7EC0082D2FE /* status_icon_off.png in Resources */,
+				DFCB3B5516DDC11B00A9A956 /* icon.iconset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
