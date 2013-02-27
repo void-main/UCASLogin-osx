@@ -34,12 +34,12 @@
 
 - (void) setupStatusMenu
 {
-    statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
-    [statusItem setMenu:statusMenu];
+    _statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
+    [_statusItem setMenu:statusMenu];
     NSString* imageName = [[NSBundle mainBundle] pathForResource:@"status_icon" ofType:@"png"];
     NSImage* imageObj = [[NSImage alloc] initWithContentsOfFile:imageName];
-    [statusItem setImage:imageObj];
-    [statusItem setHighlightMode:YES];
+    [_statusItem setImage:imageObj];
+    [_statusItem setHighlightMode:YES];
 }
 
 - (IBAction)quitTheProgram:(id)sender

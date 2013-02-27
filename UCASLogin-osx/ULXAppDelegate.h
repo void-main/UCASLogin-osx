@@ -11,10 +11,10 @@
 #import "ULXSettingsWindowController.h"
 
 @interface ULXAppDelegate : NSObject <NSApplicationDelegate> {
-    NSStatusItem* statusItem;
     IBOutlet NSMenu* statusMenu;
 }
 
+@property (retain) NSStatusItem* statusItem;
 @property (retain) ULXLoginKeyWrapper *wrapper;
 
 - (IBAction) showOpenDialog:(id)sender;
