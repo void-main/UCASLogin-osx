@@ -2,6 +2,8 @@
 //  ULXLoginWorker.h
 //  UCASLogin-osx
 //
+//  Calls the script/
+//
 //  Created by Sun Peng on 2/26/13.
 //  Copyright (c) 2013 Void Main Studio. All rights reserved.
 //
@@ -18,5 +20,8 @@
 
 - (IBAction)login:(id)sender;
 - (IBAction)logout:(id)sender;
+
+- (void) executeScript:(NSString *)script withArguments:(NSArray *)arguments;
+- (void) executeHelper:(NSArray *)arguments;
 
 @end
