@@ -12,6 +12,9 @@
 
 @interface ULXAppDelegate : NSObject <NSApplicationDelegate> {
     IBOutlet NSMenu* statusMenu;
+    
+    NSInteger currentFrame;
+    NSTimer* animTimer;
 }
 
 @property (retain) NSStatusItem* statusItem;
@@ -21,5 +24,13 @@
 - (IBAction) quitTheProgram:(id)sender;
 
 - (void) openSettingsWindow;
+
+- (void) startAnimation;
+- (void) stopAnimation;
+- (void) updateImage:(NSTimer *)timer;
+
+- (void) setStatusItemIconWithPostfix:(NSString *)postfix;
+- (void) setNetworkOffIcon;
+- (void) setNetworkOnIcon;
 
 @end

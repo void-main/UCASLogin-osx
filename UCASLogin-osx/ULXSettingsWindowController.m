@@ -40,12 +40,12 @@
     [wrapper setPassword:[passwordField stringValue]];
     if([wrapper saveToKeychain]) {
         ULXAppDelegate* mainApp = (ULXAppDelegate *)[NSApplication sharedApplication].delegate;
-        //TODO alert to say success
-        NSLog(@"Save Success!");
+        
+        [statusHint setStringValue:@"保存成功"];
         [mainApp setWrapper:wrapper];
     } else {
         // TODO alert to say failed...
-        NSLog(@"Save Failed!");
+        [statusHint setStringValue:@"保存失败"];
     }
 }
 

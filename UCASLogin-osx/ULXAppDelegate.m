@@ -36,9 +36,7 @@
 {
     _statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
     [_statusItem setMenu:statusMenu];
-    NSString* imageName = [[NSBundle mainBundle] pathForResource:@"status_icon" ofType:@"png"];
-    NSImage* imageObj = [[NSImage alloc] initWithContentsOfFile:imageName];
-    [_statusItem setImage:imageObj];
+    [self setNetworkOffIcon];
     [_statusItem setHighlightMode:YES];
 }
 
@@ -56,6 +54,43 @@
 {
     ULXSettingsWindowController* controller = [[ULXSettingsWindowController alloc] initWithWindowNibName:@"ULXSettingsWindowController"];
     [controller showWindow:nil];
+}
+
+
+// For Status Bar item animation
+- (void)startAnimation
+{
+    currentFrame = 0;
+    animTimer = [NSTimer scheduledTimerWithTimeInterval:1.0/20.0 target:self selector:@selector(updateImage:) userInfo:nil repeats:YES];
+}
+
+- (void)stopAnimation
+{
+    [animTimer invalidate];
+}
+
+- (void)updateImage:(NSTimer*)timer
+{
+    currentFrame++;
+    currentFrame = currentFrame % 8;
+    [self setStatusItemIconWithPostfix:[NSString stringWithFormat:@"%ld", (long)currentFrame]];
+}
+
+- (void)setStatusItemIconWithPostfix:(NSString *)postfix
+{
+    NSString* imageName = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat: @"status_icon_%@", postfix] ofType:@"png"];
+    NSImage* imageObj = [[NSImage alloc] initWithContentsOfFile:imageName];
+    [_statusItem setImage:imageObj];
+}
+
+- (void) setNetworkOffIcon
+{
+    [self setStatusItemIconWithPostfix:@"off"];
+}
+
+- (void) setNetworkOnIcon
+{
+    [self setStatusItemIconWithPostfix:@"0"];
 }
 
 @end

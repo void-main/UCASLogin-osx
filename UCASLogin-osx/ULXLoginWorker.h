@@ -20,10 +20,14 @@
     IBOutlet NSMenuItem *itemLogout;
 }
 
+@property (retain, nonatomic) ULXAppDelegate* mainApp;
+
 - (IBAction)login:(id)sender;
 - (IBAction)logout:(id)sender;
 
 - (void) executeScript:(NSString *)script withArguments:(NSArray *)arguments;
 - (void) executeHelper:(NSArray *)arguments;
+
+- (void) runScriptInNewThread:(NSArray *) array;
 
 @end

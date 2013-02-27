@@ -10,24 +10,46 @@
 
 @implementation ULXLoginWorker
 
+- (ULXAppDelegate*) mainApp
+{
+    if (_mainApp == NULL) {
+        _mainApp = [NSApplication sharedApplication].delegate;
+    }
+    
+    return _mainApp;
+}
+
+- (void)runScriptInNewThread:(NSArray *)array
+{
+    [[self mainApp] startAnimation];
+    NSThread* myThread = [[NSThread alloc] initWithTarget:self selector:@selector(executeHelper:) object:array];
+    [myThread start];  // Actually create the thread
+}
+
 - (IBAction)login:(id)sender
 {
-    ULXAppDelegate* mainApp = [NSApplication sharedApplication].delegate;
-    ULXLoginKeyWrapper* wrapper = [mainApp wrapper];
+    ULXLoginKeyWrapper* wrapper = [[self mainApp] wrapper];
     NSString* tag = [NSString stringWithFormat:@"%ld", (long)[sender tag]];
     NSArray* array = [NSArray arrayWithObjects:@"-login", tag, @"-u", [wrapper studentID], @"-p", [wrapper password], nil];
-    [self executeHelper:array];
+    [self runScriptInNewThread:array];
 }
 
 - (IBAction)logout:(id)sender
 {
     NSArray* array = [NSArray arrayWithObject:@"-logout"];
-    [self executeHelper:array];
+    [self runScriptInNewThread:array];
 }
 
 - (void) executeHelper:(NSArray *)arguments
 {
     [self executeScript:@"ulx_helper" withArguments:arguments];
+    
+    [[self mainApp] stopAnimation];
+    if ([[arguments objectAtIndex:0] isEqual: @"-login"]) {
+        [[self mainApp] setNetworkOnIcon];
+    } else {
+        [[self mainApp] setNetworkOffIcon];
+    }
 }
 
 - (void)executeScript:(NSString *)scriptName withArguments:(NSArray *)arguments

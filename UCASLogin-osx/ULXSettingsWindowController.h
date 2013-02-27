@@ -12,6 +12,7 @@
 @interface ULXSettingsWindowController : NSWindowController {
     IBOutlet NSTextField* studentIDField;
     IBOutlet NSSecureTextField* passwordField;
+    IBOutlet NSTextField* statusHint;
 }
 
 - (IBAction)saveStudentIdAndPassword:(id)sender;
