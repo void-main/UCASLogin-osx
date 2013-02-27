@@ -12,9 +12,10 @@
           https://raw.github.com/void-main/UCASLogin-osx/master/Builds/v2.0/2.0.html
         </sparkle:releaseNotesLink>
         <pubDate>Wed, 27 Feb 2013 12:48:00 +0800</pubDate>
-        <enclosure url="https://github.com/void-main/UCASLogin-osx/blob/master/Builds/v2.0/2.0.zip"
+        <enclosure url="https://raw.github.com/void-main/UCASLogin-osx/master/Builds/v2.0/2.0.zip"
                    sparkle:version="2.0"
                    sparkle:dsaSignature="MC0CFBhEEmLaBYPUCTZck28QTU/sXtxkAhUAmb/SGKMABsyjzjXhsKCVM65lXb0="
+                   length="552649"
                    type="application/octet-stream" />
     </item>
    </channel>
